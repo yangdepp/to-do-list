@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 html{
   background-color: aliceblue;
 }
@@ -10,4 +14,30 @@ html{
   top: 50%;
   left: 50%;
   margin: -100px 0 0 -250px;
+}
+.headerContent{
+  background-color: aqua;
+  margin-right: 5px;
+}
+.bto1{
+  margin-right: 60px;
+}
+.footContent{
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+}
+.left{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rebeccapurple;
+}
+.right{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rebeccapurple;
 }
