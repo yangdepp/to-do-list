@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+ul {
+  list-style-type: none;
+}
 html{
   background-color: aliceblue;
 }
@@ -16,8 +19,13 @@ html{
   margin: -100px 0 0 -250px;
 }
 .headerContent{
-  background-color: aqua;
   margin-right: 5px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+.headerContent-copy{
+  display: non;
+
 }
 .bto1{
   margin-right: 60px;
@@ -32,12 +40,10 @@ html{
   left: 0;
   bottom: 0;
   z-index: 2;
-  background-color: rebeccapurple;
 }
 .right{
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 2;
-  background-color: rebeccapurple;
 }
