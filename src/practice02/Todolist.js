@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoLi from './TodoLi'
-import './App.css';
+
 
 
 class Todolist extends React.Component {
@@ -26,7 +26,6 @@ class Todolist extends React.Component {
         })
     }
     handleDelete(index) {
-        console.log(index)
         const list = [...this.state.list]
         list.splice(index, 1)
         this.setState({

@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Todolist from './Todolist'
+import AppLi from '../src/component/AppLi'
+import App from './component/App';
+import List from './practice01/List'
+import Tolist from './practice01/Tolist'
+import Todolist from './practice02/Todolist'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
