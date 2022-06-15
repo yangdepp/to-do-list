@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoLi from './TodoLi'
 import './App.css';
 
 
@@ -7,8 +8,11 @@ class Todolist extends React.Component {
         super(props)
         this.state = {
             list: [],
-             inputValue: ''
+            inputValue: ''
         }
+        this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleBtnClick = this.handleBtnClick.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
     handleBtnClick() {
         this.setState({
@@ -21,19 +25,36 @@ class Todolist extends React.Component {
             inputValue: e.target.value
         })
     }
-
+    handleDelete(index) {
+        console.log(index)
+        const list = [...this.state.list]
+        list.splice(index, 1)
+        this.setState({
+            list
+        })
+    }
+    showTolist() {
+        return (
+            this.state.list.map((item, index) => {
+                return <TodoLi
+                    delete={this.handleDelete}
+                    index={index}
+                    key={index}
+                    content={item} />
+                // return <li key={index} onClick={this.handleItemClick.bind(this, index)}>{item}</li>
+            })
+        )
+    }
     render() {
         return (
             <div>
                 <div>
-                    <input value={this.state.inputValue} onChange={this.handleInputChange.bind(this)} />
-                    <button onClick={this.handleBtnClick.bind(this)}>add</button>
+                    <input value={this.state.inputValue} onChange={this.handleInputChange} />
+                    <button onClick={this.handleBtnClick}>add</button>
                 </div>
                 <ul>
                     {
-                        this.state.list.map((item, index) => {
-                            return <li key={index}>{item}</li>
-                        })
+                        this.showTolist()
                     }
                 </ul>
             </div>

@@ -29,7 +29,7 @@ input{
   overflow: visible;
 }
 .header-foot div{
-  overflow: scroll;
+
   border: 1px solid beige;
 }
 .bto1{
