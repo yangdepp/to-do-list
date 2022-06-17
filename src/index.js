@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import AppLi from '../src/component/AppLi'
 import App from './component/App';
 import List from './practice01/List'
 import Tolist from './practice01/Tolist'
