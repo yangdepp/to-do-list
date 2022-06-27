@@ -1,40 +1,39 @@
 import React from 'react';
-
 class Input extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            inputValue: ''
+            inputValue: '',
         }
+        this.handleChangeInput = this.handleChangeInput.bind(this)
+        this.changeKey=this.changeKey.bind(this)
     }
     handleChangeInput(e) {
+        console.log(e.currentTarget.value)
         this.setState({
-            inputValue: e.currentTarget.value
+            inputValue: e.target.value,
         })
     }
-
 
     changeKey(e) {
+        //当按下回车时通过props通知父组件更新
         if (e.keyCode === 13) {
-            this.props.inputs(e.currentTarget.value)
+            this.props.inputs(e.target.value)
+            this.setState({
+                inputValue: ''
+            })
         }
-        this.setState({
-            inputValue: ''
-        })
     }
-
-
     render() {
         return (
             <div>
                 <input
-                    onKeyDown={this.changeKey.bind(this)}
-                    onChange={this.handleChangeInput.bind(this)}
+                    onKeyDown={this.changeKey}
+                    onChange={this.handleChangeInput}
                     value={this.state.inputValue}
                     placeholder='123' />
             </div>
         )
     }
 }
-
 export default Input;
