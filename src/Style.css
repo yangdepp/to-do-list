@@ -1,5 +1,20 @@
+ul,li,a,p{
+   list-style-type: none;
+}
 .header{
-    width: 30%;
+    width: 300px;
     height: 200px;
     border: 1px solid black;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    margin: -150px 0 0 -100px;
+}
+.Tablist{
+    margin-left: 35px;
+}
+.input{
+    width: 95%;
+    border: 0;
+    border-bottom: 1px solid black;
 }

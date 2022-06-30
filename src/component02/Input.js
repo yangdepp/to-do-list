@@ -9,7 +9,6 @@ class Input extends React.Component {
         this.changeKey=this.changeKey.bind(this)
     }
     handleChangeInput(e) {
-        console.log(e.currentTarget.value)
         this.setState({
             inputValue: e.target.value,
         })
@@ -27,7 +26,7 @@ class Input extends React.Component {
     render() {
         return (
             <div>
-                <input
+                <input className='input'
                     onKeyDown={this.changeKey}
                     onChange={this.handleChangeInput}
                     value={this.state.inputValue}
