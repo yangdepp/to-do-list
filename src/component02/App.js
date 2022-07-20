@@ -2,15 +2,17 @@ import React from 'react';
 import Input from './Input'
 import Style from '../Style.css'
 import Todolist from './Todolist';
-import Tab from './Tab'
-import TabList from './TabList';
-import  Tabs  from './component02/Tabs';
-import  Todo  from './component02/Todo';
+import Span from '../Span';
+import All from './All';
+import Actived from './Actived';
+import Completed from './Completed';
+import Content from '../Content';
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            list: ['']
+            list: [''],
+            item: 0
         }
     }
     addInput = (inputValue) => {
@@ -20,22 +22,21 @@ class App extends React.Component {
             list: currentValue
         })
     }
+    handleChange=(index)=>{
+        this.setState({
+            item:index
+        })
+    }
     render() {
         return (
             <div>
                 <div className='header'>
-                    <Tab>
-                       <Tabs></Tabs>
-                    </Tab>
-
-
+                    <Span handleChange={this.handleChange}/>
                     <Input inputs={this.addInput} />
                     <Todolist lists={this.state.list} />
-
-
-                    <TabList>
-                         <Todo></Todo>
-                    </TabList>
+                    <All all={this.state.item} />
+                    <Actived actived={this.state.item} />
+                    <Completed completed={this.state.item} />
                 </div>
             </div>
         )

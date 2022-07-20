@@ -6,7 +6,7 @@ class Input extends React.Component {
             inputValue: '',
         }
         this.handleChangeInput = this.handleChangeInput.bind(this)
-        this.changeKey=this.changeKey.bind(this)
+        this.changeKey = this.changeKey.bind(this)
     }
     handleChangeInput(e) {
         this.setState({

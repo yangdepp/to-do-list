@@ -4,9 +4,7 @@ function TabList(props) {
         <div>
             {React.Children.map(props.children,
                 (child, index) => {
-                    return React.cloneElement(child, {
-                        index
-                    })
+                    return React.cloneElement(child, {index})
                 })}
         </div>
     )
