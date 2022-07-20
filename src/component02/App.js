@@ -4,8 +4,8 @@ import Style from '../Style.css'
 import Todolist from './Todolist';
 import Tab from './Tab'
 import TabList from './TabList';
-import  Tabs  from '../component02/Tabs';
-import  Todo  from '../component02/Todo';
+import  Tabs  from './component02/Tabs';
+import  Todo  from './component02/Todo';
 class App extends React.Component {
     constructor(props) {
         super(props)

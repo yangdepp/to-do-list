@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import TabStatusContext from "./context";
 
-function Tab({ children, index,onChange }) {
+function Tab({ children, index}) {
     const tabStatusContext = useContext(TabStatusContext)
     const handleClick = () => {
        tabStatusContext.setIndex(index)
