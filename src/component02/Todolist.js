@@ -13,7 +13,9 @@ class Todolist extends React.Component {
                 {this.props.lists.map((item, index) => {
                     return <div key={index} onClick={this.handleChange.bind(this, index)}>{item}</div>
                 })}
+
             </div>
+
         )
     }
 }

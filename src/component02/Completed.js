@@ -1,10 +1,10 @@
 import React from "react";
-class Completed extends React.Component{
- 
-    render(){
+class Completed extends React.Component {
+
+    render() {
         return (
             <div>
-                789
+               789
             </div>
         )
     }

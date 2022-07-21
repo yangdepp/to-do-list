@@ -18,9 +18,10 @@ ul,li,a,p{
     border: 0;
     border-bottom: 1px solid black;
 }
-.spans{
-    border-bottom: 1px solid black;
-}
+
 .spans span{
     margin-right: 70px;
+}
+.menu{
+    border-bottom: solid 2px rgb(16, 41, 203);
 }

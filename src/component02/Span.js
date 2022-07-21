@@ -1,5 +1,7 @@
 import React from "react";
-import Completed from "./component02/Completed";
+
+
+
 class Span extends React.Component {
     constructor(props) {
         super(props)
@@ -8,26 +10,29 @@ class Span extends React.Component {
                 'All',
                 'Actived',
                 'Competed'
-            ]
+            ],
+            item: []
         }
     }
     handleValue(index) {
-        const { handleChange } = this.props
-        handleChange(index)
+        this.props.spans(this.state)
+        let value = this.state.item
+        value = index
         this.setState({
-            item: index
+            item: value
         })
+      
     }
-
     render() {
+        const s = this.state.item
         return (
             <div className="spans">
                 {this.state.list.map((items, index) => {
-                    return <span key={index} onClick={this.handleValue.bind(this, index)}>
+                    return <span className={s === index ? 'menu' : ''} key={index}  onClick={this.handleValue.bind(this, index)}>
                         {items}
                     </span>
                 })}
-
+             
             </div>
 
         )

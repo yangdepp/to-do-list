@@ -2,17 +2,15 @@ import React from 'react';
 import Input from './Input'
 import Style from '../Style.css'
 import Todolist from './Todolist';
-import Span from '../Span';
+import Span from './Span';
+import Content from './Content';
 import All from './All';
-import Actived from './Actived';
-import Completed from './Completed';
-import Content from '../Content';
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [''],
-            item: 0
+            s: []
         }
     }
     addInput = (inputValue) => {
@@ -22,21 +20,21 @@ class App extends React.Component {
             list: currentValue
         })
     }
-    handleChange=(index)=>{
+    callback = (s) => {
         this.setState({
-            item:index
+            s
         })
     }
     render() {
+
         return (
             <div>
                 <div className='header'>
-                    <Span handleChange={this.handleChange}/>
+                    <Span spans={this.callback} />
                     <Input inputs={this.addInput} />
+                    <Content value={this.state.s} />
                     <Todolist lists={this.state.list} />
-                    <All all={this.state.item} />
-                    <Actived actived={this.state.item} />
-                    <Completed completed={this.state.item} />
+                    <All/>
                 </div>
             </div>
         )
