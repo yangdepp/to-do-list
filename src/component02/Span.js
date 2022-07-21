@@ -11,7 +11,7 @@ class Span extends React.Component {
                 'Actived',
                 'Competed'
             ],
-            item: []
+            item: [0]
         }
     }
     handleValue(index) {

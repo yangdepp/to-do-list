@@ -4,7 +4,7 @@ class Actived extends React.Component{
     render(){
        return (
            <div>
-               456
+           
            </div>
        )
     }

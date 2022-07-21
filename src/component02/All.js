@@ -5,7 +5,7 @@ class All extends React.Component {
         
         return (
             <div>
-              123
+      
             </div>
         )
         

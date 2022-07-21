@@ -30,7 +30,7 @@ class Input extends React.Component {
                     onKeyDown={this.changeKey}
                     onChange={this.handleChangeInput}
                     value={this.state.inputValue}
-                    placeholder='123' />
+                    placeholder='接下来要做什么' />
             </div>
         )
     }

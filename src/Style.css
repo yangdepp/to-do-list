@@ -10,6 +10,16 @@ ul,li,a,p{
     top: 50%;
     margin: -150px 0 0 -100px;
 }
+.two{
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+.one{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 .Tablist{
     margin-left: 35px;
 }

@@ -5,13 +5,10 @@ import Completed from "./Completed"
 
 class Content extends React.Component {
     render() {
-        // const list=this.props.num
-        // console.log(list);
-        let lists = this.props.value.item
-        console.log(lists);
-        if (lists === 0) {
+        let value = this.props.value.item
+        if (value === 0) {
             return <All />
-        } else if (lists === 1) {
+        } else if (value === 1) {
             return <Actived />
         } else {
             return <Completed />
