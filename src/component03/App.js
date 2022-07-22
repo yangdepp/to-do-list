@@ -1,16 +1,17 @@
 import React from 'react';
-import Input from './Input'
-import Style from './Style.css'
-import Todolist from './Todolist';
+import Actived from './Actived';
+import All from './All';
+import Completed from './Completed';
+import Input from './Input';
 import Span from './Span';
-import Content from './Content';
+import Style from './Style.css'
 import Bottom from './Bottom';
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [],
-            s: []
+            items:[]
         }
     }
     addInput = (inputValue) => {
@@ -21,22 +22,20 @@ class App extends React.Component {
         })
 
     }
-    callback = (s) => {
+    handleIndex=(items)=>{
         this.setState({
-            s
+            items
         })
     }
     render() {
-
         return (
-            <div>
-                <div className='header'>
-                    <Span spans={this.callback} />
-                    <Input inputs={this.addInput} />
-                    <Content value={this.state.s} />
-                    <Todolist lists={this.state.list} />
-                    <Bottom value={this.state.list} />
-                </div>
+            <div className='one'>
+                <Span spans={this.handleIndex}/>
+                <Input inputs={this.addInput} />
+                <All all={this.state} />
+                <Actived actived={this.state} />
+                <Completed completed={this.state} />
+                <Bottom value={this.state.list} />
             </div>
         )
     }

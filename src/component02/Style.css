@@ -36,3 +36,6 @@ ul,li,a,p{
 .menu{
     border-bottom: solid 2px rgb(16, 41, 203);
 }
+.todolist{
+    border-bottom: 1px solid black;
+}

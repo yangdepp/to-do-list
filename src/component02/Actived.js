@@ -1,15 +1,6 @@
 import React from "react";
 class Actived extends React.Component{
-    constructor(props){
-        super(props)
-        this.state={
-            list:[
-                '4',
-                '5',
-                '6'
-            ]
-        }
-    }
+   
     render(){
        return (
            <div>

@@ -4,7 +4,7 @@ class Bottom extends React.Component {
         return (
             <div>
                 <span className='two'>{this.props.value.length}items left</span>
-                <span className='one'>{this.props.value.length}Clear Completed</span>
+                <span className='one'>Clear Completed{this.props.value.length}</span>
             </div>
         )
     }
