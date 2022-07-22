@@ -4,15 +4,13 @@ import Style from '../Style.css'
 import Todolist from './Todolist';
 import Span from './Span';
 import Content from './Content';
-// import Actived from './Actived';
-// import All from './All';
-// import Completed from './Completed';
+import Bottom from './Bottom';
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             list: [],
-            s: [1]
+            s: []
         }
     }
     addInput = (inputValue) => {
@@ -37,10 +35,7 @@ class App extends React.Component {
                     <Input inputs={this.addInput} />
                     <Content value={this.state.s} />
                     <Todolist lists={this.state.list} />
-                    <div>
-                        <span className='two'>{this.state.list.length}items left</span>
-                        <span className='one'>{this.state.list.length}Clear Completed</span>
-                    </div>
+                    <Bottom value={this.state.list} />
                 </div>
             </div>
         )

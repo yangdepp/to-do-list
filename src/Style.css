@@ -2,6 +2,7 @@ ul,li,a,p{
    list-style-type: none;
 }
 .header{
+    overflow: hidden;
     width: 300px;
     height: 200px;
     border: 1px solid black;
