@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import App from './component02/App'
-import App from './component03/App';
+ import App from './component02/App'
+// import App from './component03/App';
 
 
 
 
 // import { Tab, Tabs, TabList, Panel, PanelList } from './component01'
-
 // function App() {
 //   return (
 //     <Tabs>

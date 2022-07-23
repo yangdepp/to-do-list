@@ -3,8 +3,8 @@ class Bottom extends React.Component {
     render() {
         return (
             <div>
-                <span className='two'>{this.props.value.length}items left</span>
-                <span className='one'>Clear Completed{this.props.value.length}</span>
+                <span className='two'>items left{this.props.value.length}</span>
+                <span className='one'>{this.props.value.length}Clear Completed</span>
             </div>
         )
     }
