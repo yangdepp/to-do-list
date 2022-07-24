@@ -11,6 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: [],
+      status: 'All',
     };
   }
 
@@ -47,14 +48,21 @@ class App extends React.Component {
     });
   };
 
+  changeRenderStatus = (status) => {
+    this.setState({
+      status,
+    });
+  };
   render() {
     console.log(this.state.data);
     return (
       <div>
-        <Header />
+        <Header changeRenderStatus={this.changeRenderStatus} />
         <Input addItem={this.addItem} />
         <List
+          status={this.state.status}
           data={this.state.data}
+          status={this.state.status}
           changeItemStatus={this.changeItemStatus}
           deleteItem={this.deleteItem}
         />

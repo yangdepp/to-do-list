@@ -2,10 +2,19 @@ import React from 'react';
 
 class List extends React.Component {
   render() {
-    const { data, changeItemStatus, deleteItem } = this.props;
+    const { data, changeItemStatus, deleteItem, status } = this.props;
+
+    let resultData;
+    if (status !== 'All') {
+      resultData = data.filter((item) =>
+        status === 'Complete' ? item.isDone : !item.isDone,
+      );
+    } else {
+      resultData = data;
+    }
     return (
       <div>
-        {data.map((item) => {
+        {resultData.map((item) => {
           const { id, value, isDone } = item;
           return (
             <div>
