@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
- import App from './component02/App'
+ import App from './component04/App'
 // import App from './component03/App';
 
 
