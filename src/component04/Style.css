@@ -1,0 +1,35 @@
+.body{
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    margin: -150px 0 0 -100px;
+}
+.header span{
+    margin-right: 80px;
+}
+.input input{
+    width: 83%;
+}
+.input button{
+    position: absolute;
+    right: 0;
+}
+.list div button{
+    position: absolute;
+    right: 0;
+}
+
+.one{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.two{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

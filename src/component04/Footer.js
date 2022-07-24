@@ -4,7 +4,8 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-        <div>Footer</div>
+        <span className='one'>Item left</span>
+        <span className='two'>Clear completed</span>
       </div>
     );
   }

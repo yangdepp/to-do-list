@@ -3,6 +3,7 @@ import Header from './Header';
 import Input from './Input';
 import List from './List';
 import Footer from './Footer';
+import Style from './Style.css'
 
 let id = 0;
 
@@ -56,11 +57,10 @@ class App extends React.Component {
   render() {
     console.log(this.state.data);
     return (
-      <div>
+      <div className='body'>
         <Header changeRenderStatus={this.changeRenderStatus} />
         <Input addItem={this.addItem} />
         <List
-          status={this.state.status}
           data={this.state.data}
           status={this.state.status}
           changeItemStatus={this.changeItemStatus}

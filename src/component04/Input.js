@@ -19,7 +19,7 @@ class Input extends React.Component {
     console.log(this.state.inputValue);
     const { inputValue } = this.state;
     return (
-      <div>
+      <div className='input'>
         <input value={inputValue} onChange={this.onChange} />
         <button
           onClick={() => {

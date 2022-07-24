@@ -13,7 +13,7 @@ class List extends React.Component {
       resultData = data;
     }
     return (
-      <div>
+      <div className='list'>
         {resultData.map((item) => {
           const { id, value, isDone } = item;
           return (

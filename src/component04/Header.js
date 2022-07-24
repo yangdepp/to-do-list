@@ -19,16 +19,16 @@ class Header extends React.Component {
   render() {
     const { currentIndex } = this.state;
     return (
-      <div>
+      <div className='header'>
         {['All', 'Active', 'Complete'].map((item, index) => {
           return (
-            <button
+            <span
               key={index}
               onClick={() => this.handleClick(index, item)}
               style={{ color: `${index === currentIndex ? 'red' : '#000'}` }}
             >
               {item}
-            </button>
+            </span>
           );
         })}
       </div>
