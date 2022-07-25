@@ -6,8 +6,7 @@ class List extends React.Component {
 
     let resultData;
     if (status !== 'All') {
-      resultData = data.filter((item) =>
-        status === 'Complete' ? item.isDone : !item.isDone,
+      resultData = data.filter((item) => status === 'Complete' ? item.isDone : !item.isDone,
       );
     } else {
       resultData = data;
@@ -22,12 +21,14 @@ class List extends React.Component {
                 key={id}
                 onClick={() => changeItemStatus({ id, isDone })}
                 className='iconfont icon-duihao'></button>
+
               <span
                 style={{ color: `${isDone ? '#ccc' : '#000'}` }}
                 key={id}
                 onClick={() => changeItemStatus({ id, isDone })}>
                 {value}
               </span>
+
               <button className='iconfont icon-fork'
                 onClick={() => deleteItem(id)}></button>
             </div>

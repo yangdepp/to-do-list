@@ -2,7 +2,7 @@ import React from 'react';
 
 class Footer extends React.Component {
   render() {
-    const {changeRight}=this.props
+    const { changeRight } = this.props
     const p = this.props.handleLeft
     const result = p.filter((item) => item.isDone === false)
     return (

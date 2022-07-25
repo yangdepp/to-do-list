@@ -1,5 +1,4 @@
 import React from 'react';
-
 class Input extends React.Component {
   constructor(props) {
     super(props);
@@ -7,34 +6,29 @@ class Input extends React.Component {
       inputValue: '',
     };
   }
-
   onChange = (e) => {
     this.setState({
       inputValue: e.target.value,
     });
   };
-
   render() {
     const { addItem } = this.props;
-    console.log(this.state.inputValue);
     const { inputValue } = this.state;
     return (
       <div className='input'>
         <input value={inputValue} onChange={this.onChange} />
-        <button
-          onClick={() => {
+        <button onClick={
+          () => {
             if (inputValue.trim()) {
               addItem({
                 value: inputValue.trim(),
                 isDone: false,
               });
               this.setState({
-                inputValue: '', 
+                inputValue: '',
               });
             }
-          }}
-        >
-          完成
+          }}>完成
         </button>
       </div>
     );

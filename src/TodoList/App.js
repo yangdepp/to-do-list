@@ -23,7 +23,7 @@ class App extends React.Component {
       ...params,
     });
     this.setState({
-      data,
+      data
     });
     id++;
   };
@@ -36,7 +36,7 @@ class App extends React.Component {
       }
     });
     this.setState({
-      data,
+      data
     });
   };
 
@@ -63,7 +63,6 @@ class App extends React.Component {
     })
   }
   render() {
-    console.log(this.state.data);
     return (
       <div className='body'>
         <Header changeRenderStatus={this.changeRenderStatus} />
