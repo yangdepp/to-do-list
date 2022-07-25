@@ -54,6 +54,14 @@ class App extends React.Component {
       status,
     });
   };
+  changeRight = () => {
+    const data = this.state.data
+    console.log(data);
+    const result = data.filter((item) => item.isDone === false)
+    this.setState({
+      data: result
+    })
+  }
   render() {
     console.log(this.state.data);
     return (
@@ -66,7 +74,7 @@ class App extends React.Component {
           changeItemStatus={this.changeItemStatus}
           deleteItem={this.deleteItem}
         />
-        <Footer />
+        <Footer handleLeft={this.state.data} changeRight={this.changeRight} />
       </div>
     );
   }

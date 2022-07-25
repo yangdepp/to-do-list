@@ -18,14 +18,16 @@ class List extends React.Component {
           const { id, value, isDone } = item;
           return (
             <div>
-              <span
+              <button style={{ color: `${isDone ? '#ccc' : '#000'}` }}
+                key={id}
+                onClick={() => changeItemStatus({ id, isDone })} className='iconfont icon-duihao'></button>
+              <div
                 style={{ color: `${isDone ? '#ccc' : '#000'}` }}
                 key={id}
-                onClick={() => changeItemStatus({ id, isDone })}
-              >
+                onClick={() => changeItemStatus({ id, isDone })}>
                 {value}
-              </span>
-              <button onClick={() => deleteItem(id)}>删除</button>
+              </div>
+              <button className='iconfont icon-fork' onClick={() => deleteItem(id)}></button>
             </div>
           );
         })}

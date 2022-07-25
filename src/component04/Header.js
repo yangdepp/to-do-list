@@ -25,7 +25,7 @@ class Header extends React.Component {
             <span
               key={index}
               onClick={() => this.handleClick(index, item)}
-              style={{ color: `${index === currentIndex ? 'red' : '#000'}` }}
+              className={currentIndex === index ? 'menu' : ''}
             >
               {item}
             </span>

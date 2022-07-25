@@ -18,11 +18,32 @@
     position: absolute;
     right: 0;
 }
-.list div button{
+.list div div{
+   position: relative;
+   left: 50px;
+}
+.icon-duihao{
+    border:none;
+    width: 30px;
+    height: 20px;
+    border-radius: 10px;
     position: absolute;
-    right: 0;
+    left: 0;
 }
 
+.icon-fork{
+    display: none;
+    border:none;
+    width: 30px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.list div div:hover~.icon-fork{
+    display: block;
+}
 .one{
     position: absolute;
     bottom: 0;
@@ -32,4 +53,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
+.menu{
+    color: rgb(240, 7, 194);
 }

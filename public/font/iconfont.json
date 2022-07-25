@@ -1,0 +1,23 @@
+{
+  "id": "3544871",
+  "name": "1236",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5387519",
+      "name": "对号",
+      "font_class": "duihao",
+      "unicode": "eaf1",
+      "unicode_decimal": 60145
+    },
+    {
+      "icon_id": "5772883",
+      "name": "叉号",
+      "font_class": "fork",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    }
+  ]
+}
