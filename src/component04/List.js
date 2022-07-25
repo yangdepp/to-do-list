@@ -20,14 +20,16 @@ class List extends React.Component {
             <div>
               <button style={{ color: `${isDone ? '#ccc' : '#000'}` }}
                 key={id}
-                onClick={() => changeItemStatus({ id, isDone })} className='iconfont icon-duihao'></button>
-              <div
+                onClick={() => changeItemStatus({ id, isDone })}
+                className='iconfont icon-duihao'></button>
+              <span
                 style={{ color: `${isDone ? '#ccc' : '#000'}` }}
                 key={id}
                 onClick={() => changeItemStatus({ id, isDone })}>
                 {value}
-              </div>
-              <button className='iconfont icon-fork' onClick={() => deleteItem(id)}></button>
+              </span>
+              <button className='iconfont icon-fork'
+                onClick={() => deleteItem(id)}></button>
             </div>
           );
         })}

@@ -1,4 +1,4 @@
-.body{
+.body {
     overflow: hidden;
     width: 300px;
     height: 200px;
@@ -8,52 +8,65 @@
     top: 50%;
     margin: -150px 0 0 -100px;
 }
-.header span{
+.header span {
     margin-right: 80px;
 }
-.input input{
+
+.input input {
     width: 83%;
 }
-.input button{
+
+.input button {
+    z-index: 2;
     position: absolute;
     right: 0;
 }
-.list div div{
-   position: relative;
-   left: 50px;
+
+.list div span {
+    width: 84%;
+
+    display: inline-block;
+    position: relative;
+    left: 50px;
 }
-.icon-duihao{
-    border:none;
+
+.icon-duihao {
+    border: 1px solid black;
     width: 30px;
-    height: 20px;
+    height: 21px;
     border-radius: 10px;
     position: absolute;
     left: 0;
 }
 
-.icon-fork{
+.icon-fork {
     display: none;
-    border:none;
+    border: none;
     width: 30px;
     height: 20px;
     border-radius: 10px;
     position: absolute;
     right: 0;
-    top: 10px;
+
+
 }
-.list div div:hover~.icon-fork{
-    display: block;
+
+.list div span:hover~.icon-fork {
+    display: inline-block;
 }
-.one{
+
+.one {
     position: absolute;
     bottom: 0;
     left: 0;
 }
-.two{
+
+.two {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-.menu{
+
+.menu {
     color: rgb(240, 7, 194);
 }

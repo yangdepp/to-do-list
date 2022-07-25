@@ -6,7 +6,7 @@ class Footer extends React.Component {
     const p = this.props.handleLeft
     const result = p.filter((item) => item.isDone === false)
     return (
-      <div>
+      <div >
         <button className='one'>Item left-{result.length}</button>
         <button onClick={() => changeRight()} className='two'>Clear completed</button>
       </div>
